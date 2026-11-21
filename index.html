@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heart Disease Predictor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Heart Disease Predictor</h1>
+    <p>Enter a patient's details to predict whether heart disease is likely.</p>
+  </header>
+
+  <main>
+    <div class="card">
+      <h2>Patient Details</h2>
+
+      <div class="form-grid">
+        <label>Age (years)
+          <input type="number" id="age" step="1" placeholder="e.g. 55">
+        </label>
+        <label>Sex
+          <select id="sex">
+            <option value="">Select</option>
+            <option value="Female">Female</option>
+            <option value="Male">Male</option>
+          </select>
+        </label>
+        <label>Blood pressure
+          <input type="number" id="blood_pressure" step="1" placeholder="e.g. 130">
+        </label>
+        <label>Cholesterol
+          <input type="number" id="cholesterol" step="1" placeholder="e.g. 220">
+        </label>
+        <label>BMI
+          <input type="number" id="bmi" step="0.1" placeholder="e.g. 29.0">
+        </label>
+        <label>Smoker
+          <select id="smoker">
+            <option value="">Select</option>
+            <option value="No">No</option>
+            <option value="Yes">Yes</option>
+          </select>
+        </label>
+        <label>Diabetes
+          <select id="diabetes">
+            <option value="">Select</option>
+            <option value="No">No</option>
+            <option value="Yes">Yes</option>
+          </select>
+        </label>
+        <label>Physical activity (0 to 4)
+          <input type="number" id="physical_activity" step="1" placeholder="e.g. 2">
+        </label>
+        <label>Family history of heart disease
+          <select id="family_history">
+            <option value="">Select</option>
+            <option value="No">No</option>
+            <option value="Yes">Yes</option>
+          </select>
+        </label>
+        <label>Stress level (1 to 9)
+          <input type="number" id="stress_level" step="1" placeholder="e.g. 5">
+        </label>
+      </div>
+
+      <div class="actions">
+        <button id="predict-btn">Predict</button>
+        <button id="clear-btn" class="secondary">Clear</button>
+      </div>
+
+      <p class="note">For learning only. This is a classroom model trained on synthetic data and is not medical advice.</p>
+
+      <div id="result" class="result hidden"></div>
+    </div>
+  </main>
+
+  <footer>
+    <p>K-Nearest Neighbours model trained on a synthetic hospital dataset. Test accuracy: 47%.</p>
+   </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
